@@ -1,6 +1,6 @@
 {
-  "name": "model-mvc",
-  "version": "1.0.0",
+  "name": "agenda-js",
+  "version": "0.0.2",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "core-js": "^3.3.2",

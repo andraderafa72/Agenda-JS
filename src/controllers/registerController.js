@@ -4,7 +4,7 @@ exports.index = (req, res, next) => {
     res.render('register')
 }
 
-exports.registrarUsuario = async function (req, res) {
+exports.send = async function (req, res) {
     try {
         const login = new Login(req.body);
         await login.register();

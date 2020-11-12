@@ -15,10 +15,14 @@ const registerController = require('./src/controllers/registerController');
 route.get('/', homePageController.index);
 
 route.get('/login/index', loginController.index);
-route.post('/login/send', loginController.send)
+route.post('/login/send', loginController.send);
+route.get('/login/logout', loginController.logout);
+
+route.get('/login/loged', loginController.loged);
+
 
 route.get('/register/index', registerController.index);
-route.post('/register/send', registerController.registrarUsuario)
+route.post('/register/send', registerController.send)
 
 
 module.exports = route;
