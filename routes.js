@@ -7,10 +7,18 @@ const express = require('express');
 const route = express.Router();
 
 // IMPORTAÇÃO DE CONTROLLERS
-const homePageController = require('./src/controllers/homePageController')
+const homePageController = require('./src/controllers/homePageController');
+const loginController = require('./src/controllers/loginController');
+const registerController = require('./src/controllers/registerController');
 
 // CONTROLADOR DE ROTAS
-route.get('/', homePageController.homePageController);
-route.post('/', homePageController.homePagePost);
+route.get('/', homePageController.index);
+
+route.get('/login/index', loginController.index);
+route.post('/login/send', loginController.send)
+
+route.get('/register/index', registerController.index);
+route.post('/register/send', registerController.registrarUsuario)
+
 
 module.exports = route;
