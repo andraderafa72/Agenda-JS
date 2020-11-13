@@ -1,29 +1,38 @@
 <%- include('includes/head'); %>
-<%- include('includes/nav'); %>
+  <%- include('includes/nav'); %>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-2"></div>
 
-        <div class="col-lg-8 my-3">
+        <div class="col-lg-8 my-3" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
           <h1 class="display-2 text-center">Agenda</h1>
-          <p class="text-center my-4 lead">Contatos cadastrados:</p>
-          <%- include('includes/messages') %>
+          <% if(user) { %>
+            <% if(contatos.length > 0){ %>
 
-          <div class="responsive-table">
-            <table class="table my-3">
-              <tr>
-                <td>Rafael</td>
-                <td>Andrade</td>
-                <td>84988181526</td>
-                <td>rafamira675@gmail.com</td>
-              </tr>
-            </table>
-          </div>
+
+              <p class="text-center my-4 lead">Contatos cadastrados:</p>
+              <%- include('includes/messages') %>
+
+                <%- include('includes/contatosTable') %>
+
+                  <% } else { %>
+                    <p style="font-size: 24px; color: rgb(116, 116, 116)">Cadastre seus contatos clicando no <span style=" font-size: 30px; padding: 8px 12px 10px; color: #007bff;">+</span></p>
+                    <% } %>
+
+                      <div class="mx-auto ">
+                        <a href="/contato/index " class="btn btn-primary my-5 " style=" font-size: 36px; height: 75px; border-radius: 100%; text-decoration: none; width: 75px; ">+</a>
+                      </div>
+                      <% } else {%>
+                        <p style="font-size: 24px; color: rgb(116, 116, 116)">Crie sua conta ou conecte-se para acessar a agenda!</p>
+                        <div class="mx-auto ">
+                          <a href="/contato/index " class="btn btn-primary my-5 ">Entrar</a>
+                          <a href="/contato/index " class="btn btn-secondary my-5 ">Criar conta</a>
+                        </div>
+                        <% } %>
         </div>
 
-        <div class="col-lg-2"></div>
+        <div class="col-lg-2 "></div>
       </div>
     </div>
-
-<%- include('includes/footer') %>
+    <%- include('includes/footer') %>

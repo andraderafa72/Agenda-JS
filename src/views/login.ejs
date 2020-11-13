@@ -1,5 +1,5 @@
 <%- include('includes/head'); %>
-<%- include('includes/nav'); %>
+  <%- include('includes/nav'); %>
 
     <div class="container">
       <div class="row">
@@ -9,40 +9,40 @@
         <div class="col-lg-8 my-3">
           <h1 class="display-4 text-center">Entrar</h1>
           <p class="text-center lead">Faça login ou crie sua conta</p>
-          
+
           <%- include('includes/messages') %>
 
-            <div class="row">   
-                <div class="col-lg-2"></div>
+            <div class="row">
+              <div class="col-lg-2"></div>
 
-                <div class="col-lg-8">
-                    
-                  <form class="my-3" action="/login/send" method="POST">
-                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                        <div class="form-group">
-                          <label>E-mail</label>
-                          <input type="text" class="form-control" name="email" placeholder="Usuário">
-                        </div>
-                        <div class="form-group">
-                          <label>Senha</label>
-                          <input type="password" class="form-control" name="password" placeholder="Senha">
-                        </div>
+              <div class="col-lg-8">
 
-
-                        <div class="mx-auto my-4" style="width: 310px;">
-                            <button type="submit" class="btn btn-primary" style="width: 150px;">Entrar</button>
-                            <a href="/register/index" class="btn btn-outline-primary" style="width: 150px;">Registrar-se</a>
-                        </div>
-                        
-                    </form>
+                <form class="my-3" action="/login/send" method="POST">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" class="form-control" name="email" placeholder="Usuário">
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Senha">
                   </div>
 
-                <div class="col-lg-2"></div>
 
+                  <div class="mx-auto my-4" style="width: 310px;">
+                    <button type="submit" class="btn btn-primary" style="width: 150px;">Entrar</button>
+                    <a href="/register/index" class="btn btn-outline-primary" style="width: 150px;">Registrar-se</a>
+                  </div>
+
+                </form>
+              </div>
+
+              <div class="col-lg-2"></div>
+
+            </div>
+
+            <div class="col-lg-2"></div>
         </div>
-
-        <div class="col-lg-2"></div>
       </div>
-    </div>
 
-<%- include('includes/footer') %>
+      <%- include('includes/footer') %>

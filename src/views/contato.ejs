@@ -1,0 +1,23 @@
+<%- include('includes/head'); %>
+  <%- include('includes/nav'); %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+          <h1 class="display-4 text-center">Cadastre seu novo contato!</h1>
+          <p class="text-center my-2 lead">Preencha o formulário abaixo:</p>
+          <%- include('includes/messages') %>
+
+            <form class="my-3" action="/contato/send" method="POST">
+              <%- include('includes/formContato') %>
+            </form>
+
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <%- include('includes/footer') %>

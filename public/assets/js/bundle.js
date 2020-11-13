@@ -133,6 +133,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var nav = document.querySelector('#nav-menu');
+var menu = document.querySelector('#navbarSupportedContent');
+nav.addEventListener('click', function () {
+  if (menu.classList.contains('collapse')) {
+    menu.classList.remove('collapse');
+    menu.classList.add('collapsed');
+  } else {
+    menu.classList.remove('collapsed');
+    menu.classList.add('collapse');
+  }
+});
 
 /***/ }),
 
@@ -14962,7 +14973,7 @@ module.exports = path;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body{background-color: #cdd3d4}", ""]);
+exports.push([module.i, "tr.titulos {\r\n  color: rgb(90, 90, 124);\r\n  font-weight: bold;\r\n  text-align: center;\r\n}", ""]);
 // Exports
 module.exports = exports;
 

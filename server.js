@@ -8,7 +8,7 @@ const app = express();
 // ARQUITETURA PARA O BANCO DE DADOS
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTION_STRING, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.emit('ready'))
   .catch(e => console.log(`Erro na conexão: ${e}`));
 

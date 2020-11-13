@@ -1,0 +1,34 @@
+<div class="responsive-table" style="width: 100%;">
+  <table class="table my-3">
+    <tr class="titulos">
+      <td>Nome</td>
+      <td>Sobrenome</td>
+      <td>Telefone</td>
+      <td>E-mail</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <% contatos.forEach(contato => { %>
+      <tr>
+        <td>
+          <%= contato.nome %>
+        </td>
+        <td>
+          <%= contato.sobrenome %>
+        </td>
+        <td>
+          <%= contato.telefone %>
+        </td>
+        <td>
+          <%= contato.email %>
+        </td>
+        <td>
+          <a href="/contato/edit/<%= contato._id %>">Editar</a>
+        </td>
+        <td>
+          <a href="/contato/delete/<%= contato._id %>" class="text-danger">Excluir</a>
+        </td>
+      </tr>
+      <% }); %>
+  </table>
+</div>
