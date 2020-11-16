@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const ContatoSchema = new mongoose.Schema({
-  owner: { type: String, required: true },
+  // owner: { type: String, required: true },
   nome: { type: String, required: true },
   sobrenome: { type: String, required: false, default: '' },
   telefone: { type: String, required: false, default: '' },
@@ -40,7 +40,6 @@ Contato.prototype.cleanUp = function() {
 
     // GARANTE QUE HAVERÁ TODOS OS DADOS, SE FOREM VALIDOS
     this.body = {
-      owner: this.body.owner,
       nome: this.body.nome,
       sobrenome: this.body.sobrenome,
       telefone: this.body.telefone,

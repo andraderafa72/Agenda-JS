@@ -9,27 +9,26 @@
       <td></td>
     </tr>
     <% contatos.forEach(contato => { %>
-      <% if (user._id === contato.owner) { %>
-        <tr>
-          <td>
-            <%= contato.nome %>
-          </td>
-          <td>
-            <%= contato.sobrenome %>
-          </td>
-          <td>
-            <%= contato.telefone %>
-          </td>
-          <td>
-            <%= contato.email %>
-          </td>
-          <td>
-            <a href="/contato/edit/<%= contato._id %>">Editar</a>
-          </td>
-          <td>
-            <a href="/contato/delete/<%= contato._id %>" class="text-danger">Excluir</a>
-          </td>
-        </tr>
-        <% }}); %>
+      <tr>
+        <td>
+          <%= contato.nome %>
+        </td>
+        <td>
+          <%= contato.sobrenome %>
+        </td>
+        <td>
+          <%= contato.telefone %>
+        </td>
+        <td>
+          <%= contato.email %>
+        </td>
+        <td>
+          <a href="/contato/edit/<%= contato._id %>">Editar</a>
+        </td>
+        <td>
+          <a href="/contato/delete/<%= contato._id %>" class="text-danger">Excluir</a>
+        </td>
+      </tr>
+      <% }); %>
   </table>
 </div>

@@ -7,6 +7,7 @@ const LoginSchema = new mongoose.Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
   nome: { type: String, required: true },
+  contatos: { type: Number, required: true, default: 0 }
 });
 
 // MODEL USADO PARA CRUD
@@ -79,4 +80,3 @@ class Login {
 }
 
 module.exports = Login;
-exports.LoginModel = this.LoginModel;
