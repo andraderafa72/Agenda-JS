@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(245, 245, 245);
+  color: #1F1F1F;
+}
+
 tr.titulos {
   color: rgb(90, 90, 124);
   font-weight: bold;

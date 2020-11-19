@@ -10,7 +10,7 @@
           <p class="text-center my-2 lead">Altere os dados abaixo:</p>
           <%- include('includes/messages') %>
 
-            <form action="/contato/edit/<%= contato._id %> " method="POST">
+            <form class="form-edit-contato" action="/contato/edit/<%= contato._id %> " method="POST">
               <%- include('includes/formContato') %>
             </form>
 
