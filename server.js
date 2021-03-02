@@ -24,7 +24,7 @@ const path = require('path');
 // SEGURANÇA
 const helmet = require('helmet');
 const csrf = require('csurf');
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 
 // MIDDLEWARES
 const { csrfMiddleware, checkCSRFError, errorVariable } = require('./src/middlewares/globalMiddleware');
@@ -66,5 +66,5 @@ app.use(routes);
 
 // LISTENER APÓS CONECTAR NO BANCO DE DADOS
 app.on('ready', () => {
-  app.listen(5500, () => console.log("Servidor rodando na porta 5500: http://localhost:5500"))
+  app.listen(process.env.PORT || 5501, () => console.log("Servidor rodando na porta 5500: http://localhost:5501"))
 });
